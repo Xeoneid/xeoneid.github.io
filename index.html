@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>Blas Ingiulla</title>
+		<link rel="stylesheet" href="resources/css/w3.css">
+		<meta name="keywords" content="Blas, Ingiulla, Game Dev, Xeoneid, Buenos Aires, Argentina">
+		<meta name="description" content="Blas Ingiulla is a Game Dev from Buenos Aires. Developer of The Core">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width"; initial-scale=1.0; maxium-scale=1.0; user-scalable=0;>
+		<link rel="icon" type="image/png" href="resources/img/ico.png">
+		<script type="text/javascript" src="resources/js/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand" rel="stylesheet">
+		<link rel="stylesheet" href="resources/css/googlefonts.css">
+		<meta name="theme-color" content="#f44336">
+	</head>
+
+	<body>
+		<div class="w3-container">
+		<h1 class="w3-center"><strong>Blas</strong> Ingiulla</h1>
+		<p class="w3-center">Game Dev, Student, Buenos Aires</p>
+		<div class="w3-center"><a href="https://twitter.com/Xeoneid" class="twitter-follow-button w3-btn w3-blue w3-padding w3-hover-light-blue w3-round-jumbo" data-show-count="false">Follow @Xeoneid</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+		<br>
+		</div>
+
+		<div class="w3-content w3-card-16" style="max-width:800px;position:relative">
+
+		<div class="w3-display-container mySlides">
+			<img src="resources/img/slides/the_core.png" style="width:100%">
+			<div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">Level Desigener @ The Core</div>
+		</div>
+
+		<div class="w3-display-container mySlides">
+			<img src="resources/img/slides/the_core2.png" style="width:100%">
+			<div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">Comming this December</div>
+		</div>
+
+		<a class="w3-btn-floating w3-hover-dark-grey" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)">❮</a>
+		<a class="w3-btn-floating w3-hover-dark-grey" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)">❯</a>
+
+		</div>
+
+		<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+		showDivs(slideIndex += n);
+		}
+
+		function showDivs(n) {
+		var i;
+		var x = document.getElementsByClassName("mySlides");
+		if (n > x.length) {slideIndex = 1}
+		if (n < 1) {slideIndex = x.length}
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";
+		}
+		x[slideIndex-1].style.display = "block";
+		}
+		</script>
+	</body>
+</html>
