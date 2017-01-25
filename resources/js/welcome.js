@@ -11,5 +11,5 @@ function carousel() {
     //if (slideIndex == x.length+1) {window.location.href = "main.htm";}
     if (slideIndex > x.length) {slideIndex = 1} 
     x[slideIndex-1].style.display = "block"; 
-    setTimeout(carousel, 2000);
+    setTimeout(carousel, 2500);
 }
