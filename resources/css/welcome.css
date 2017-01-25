@@ -1,0 +1,8 @@
+div#welcome {
+	height: 100vh;
+	background: #f2f2f2; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(top, #f2f2f2, #cccccc); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top, #f2f2f2, #cccccc); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top, #f2f2f2, #cccccc); /* For Fx 3.6 to 15 */
+    background: linear-gradient(to bottom, #f2f2f2, #cccccc); /* Standard syntax (must be last) */
+}
