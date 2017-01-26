@@ -8,17 +8,25 @@ function carousel() {
       x[i].style.display = "none"; 
     }
     slideIndex++;
-    console.log("slideIndex esta en " + slideIndex);
+    console.log("slide:" + slideIndex + "/" + x.length);
+    /*
     if (slideIndex == 5) {
       // este if saca el div#welcome
-      console.log("entro al if para sacar div#welcome");
+      console.group("Delete welcome");
+      console.warn("entro al if para sacar div#welcome");
       document.getElementById("welcome").style.display = "none";
+      x[slideIndex-1].style.display = "inline";
       console.log("done");
+      console.groupEnd();
     }
-    //if (slideIndex == x.length+1) {window.location.href = "main.htm";}
+    */
+    if (slideIndex == x.length) {
+      console.warn("redirecting to main.html");
+      window.location.href = "main.html";
+    }
     if (slideIndex > x.length) {slideIndex = 1} 
     x[slideIndex-1].style.display = "block";
     if (slideIndex + 1 <= x.length) {
-      setTimeout(carousel, 2000);
+        setTimeout(carousel, 2000);
     }
 }
