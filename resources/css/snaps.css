@@ -1,0 +1,42 @@
+.cb-parent {
+  position: relative;
+}
+.cb-child {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.cb-resize {
+    cursor:zoom-in;
+    height:auto;
+    max-height:300px;
+    width:auto;
+    max-width:100%
+}
+
+/* The navigation bar */
+.cb-topbar {
+    /*list-style-type: none;*/
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+.cb-photogallery {
+    margin-top: 100px; /* Add a top margin to avoid content overlay */
+    margin-bottom: 50px;
+}
+
+.cb-text {
+  font-family:Quicksand;
+}
+
+.cb-right {
+    /*position:absolute;*/
+    /*right: 0px;*/
+    /*padding: 10px;*/
+    /*float:left;*/
+}
