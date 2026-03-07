@@ -1,26 +1,13 @@
 import { motion } from 'framer-motion'
+import MagicBento from './MagicBento'
 
-const categories = [
-  {
-    title: 'Languages',
-    skills: ['C#', 'Kotlin', 'TypeScript', 'JavaScript', 'Java'],
-  },
-  {
-    title: 'Engines & Frameworks',
-    skills: ['Unity', 'Node.js', 'React', 'Angular', 'Three.js'],
-  },
-  {
-    title: 'DevOps & Cloud',
-    skills: ['Git', 'Git LFS', 'Perforce', 'CI/CD', 'Docker', 'Kubernetes', 'AWS', 'Azure', 'Vercel', 'Jenkins'],
-  },
-  {
-    title: 'Practices',
-    skills: ['TDD', 'DDD', 'Clean Code', 'Agile', 'YAGNI', 'Code Review', 'Tech Leadership'],
-  },
-  {
-    title: 'Platforms & Tools',
-    skills: ['Unity Cloud Content Delivery', 'Firebase', 'Crashlytics', 'Photon', 'Spine', 'Jira', 'Rider'],
-  },
+const skillItems = [
+  { title: 'Unity', description: 'Cross-platform engine for mobile, WebGL & VR. My primary tool for 7+ years.', label: 'Engine' },
+  { title: 'C#', description: 'Primary language for Unity gameplay, architecture & backend systems.', label: 'Language' },
+  { title: 'Kotlin & TypeScript', description: 'Backend microservices, game servers & web clients across multiple projects.', label: 'Language' },
+  { title: 'TDD & Clean Code', description: 'Test-driven development, DDD, YAGNI, Agile — engineering practices I actually live by.', label: 'Practices' },
+  { title: 'CI/CD & Cloud', description: 'Docker, Kubernetes, AWS, Azure, Vercel, Jenkins, Perforce & Git workflows.', label: 'DevOps' },
+  { title: 'Multiplayer & Networking', description: 'Photon, WebGL/Unity integration, real-time sync, reconnect & late-join systems.', label: 'Networking' },
 ]
 
 export default function Skills() {
@@ -32,39 +19,31 @@ export default function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true, margin: '-80px' }}
+          style={{ marginBottom: 16 }}
         >
           <span className="section-label">Skills</span>
           <h2 className="section-title">Tools of the trade</h2>
         </motion.div>
-
-        <div className="skills-categories">
-          {categories.map((cat, ci) => (
-            <motion.div
-              key={cat.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: ci * 0.07 }}
-              viewport={{ once: true, margin: '-60px' }}
-            >
-              <p className="skill-category-title">{cat.title}</p>
-              <div className="skills-row">
-                {cat.skills.map((skill, si) => (
-                  <motion.span
-                    key={skill}
-                    className="skill-chip"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.3, delay: ci * 0.05 + si * 0.04 }}
-                    viewport={{ once: true }}
-                  >
-                    {skill}
-                  </motion.span>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </div>
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+        viewport={{ once: true, margin: '-60px' }}
+        style={{ display: 'flex', justifyContent: 'center' }}
+      >
+        <MagicBento
+          items={skillItems}
+          textAutoHide={false}
+          enableStars={true}
+          enableSpotlight={true}
+          enableBorderGlow={true}
+          enableTilt={false}
+          clickEffect={true}
+          enableMagnetism={true}
+        />
+      </motion.div>
     </section>
   )
 }

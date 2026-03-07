@@ -1,10 +1,5 @@
 import { motion } from 'framer-motion'
-
-const orbs = [
-  { color: '#6366f1', width: 700, height: 500, top: '-15%', left: '-10%', duration: 22 },
-  { color: '#8b5cf6', width: 500, height: 500, top: '10%', right: '-5%', duration: 28 },
-  { color: '#0ea5e9', width: 400, height: 400, top: '55%', left: '30%', duration: 18 },
-]
+import Silk from './Silk'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -18,32 +13,8 @@ const fadeUp = {
 export default function Hero() {
   return (
     <section className="hero" id="home">
-      {/* Animated aurora background */}
-      <div className="hero-bg">
-        {orbs.map((orb, i) => (
-          <motion.div
-            key={i}
-            className="hero-orb"
-            style={{
-              width: orb.width,
-              height: orb.height,
-              background: orb.color,
-              top: orb.top,
-              left: orb.left,
-              right: orb.right,
-            }}
-            animate={{
-              x: [0, 60, -40, 0],
-              y: [0, -40, 60, 0],
-              scale: [1, 1.1, 0.95, 1],
-            }}
-            transition={{
-              duration: orb.duration,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-          />
-        ))}
+      <div style={{ position: 'absolute', inset: 0 }}>
+        <Silk speed={4} scale={1.2} color="#1a1040" noiseIntensity={1.5} rotation={0} />
       </div>
 
       <div className="container">
