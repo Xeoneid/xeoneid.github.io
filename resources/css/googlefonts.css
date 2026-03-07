@@ -1,9 +1,0 @@
-h1,h2,h3,h4,h5,h6,p,a {
-	font-family: 'Quicksand', sans-serif;
-}
-.montserrat {
-    font-family: 'Montserrat', sans-serif;
-}
-
-/* this should be on another css file, but for rush reaseons it will remain here for a while */
-.w3-twitter,.w3-hover-twitter:hover{color:#FFFFFF!important;background-color:#1DA1F2!important}
