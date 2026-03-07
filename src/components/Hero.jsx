@@ -85,7 +85,7 @@ export default function Hero() {
             animate="visible"
             custom={3}
           >
-            7+ years building mobile games, multiplayer systems, and Unity-based
+            10+ years building mobile games, multiplayer systems, and Unity-based
             products. Specialized in gameplay engineering, team leadership, and
             shipping titles from prototype to production.
           </motion.p>

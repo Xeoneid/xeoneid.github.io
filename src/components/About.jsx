@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 
 const stats = [
-  { number: '7+', label: 'Years in the industry' },
+  { number: '10+', label: 'Years in the industry' },
   { number: '10+', label: 'Shipped titles' },
   { number: '5+', label: 'Companies' },
   { number: '∞', label: 'Bugs fixed' },
@@ -27,7 +27,7 @@ export default function About() {
             <span className="section-label">About</span>
             <h2 className="section-title">Gameplay Engineer<br />by trade, gamer by heart</h2>
             <p>
-              I&apos;m a Game Engineer based in Buenos Aires with over 7 years of experience
+              I&apos;m a Game Engineer based in Buenos Aires with over 10 years of experience
               shipping mobile and online games. My journey spans level design at an indie
               studio all the way up to leading cross-disciplinary teams and architecting
               core gameplay systems at established studios.
