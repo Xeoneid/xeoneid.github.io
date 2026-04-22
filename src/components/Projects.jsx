@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import PixelCard from './PixelCard'
 
 const projects = [
   {
@@ -65,12 +66,6 @@ const projects = [
   },
 ]
 
-const ArrowIcon = () => (
-  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="project-link-icon">
-    <path d="M1 13L13 1M13 1H5M13 1V9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
-)
-
 export default function Projects() {
   return (
     <section id="projects">
@@ -92,25 +87,39 @@ export default function Projects() {
           {projects.map((project, i) => (
             <motion.div
               key={project.title}
-              className="project-card"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: (i % 3) * 0.08 }}
               viewport={{ once: true, margin: '-60px' }}
-              onClick={() => project.link && window.open(project.link, '_blank')}
-              style={{ cursor: project.link ? 'pointer' : 'default' }}
             >
-              <div className="project-card-header">
-                <span className="project-company">{project.company}</span>
-                {project.link && <ArrowIcon />}
-              </div>
-              <h3 className="project-title">{project.title}</h3>
-              <p className="project-desc">{project.description}</p>
-              <div className="project-tags">
-                {project.tags.map((tag) => (
-                  <span key={tag} className="tag">{tag}</span>
-                ))}
-              </div>
+              <PixelCard
+                colors="#6366f1,#818cf8,#a5b4fc"
+                gap={6}
+                speed={30}
+                style={{ width: '100%', height: '320px' }}
+              >
+                <div
+                  className="pixel-card-content"
+                  onClick={() => project.link && window.open(project.link, '_blank')}
+                  style={{ cursor: project.link ? 'pointer' : 'default' }}
+                >
+                  <div className="pixel-card-header">
+                    <span className="project-company">{project.company}</span>
+                    {project.link && (
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M1 13L13 1M13 1H5M13 1V9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    )}
+                  </div>
+                  <h3 className="project-title">{project.title}</h3>
+                  <p className="project-desc">{project.description}</p>
+                  <div className="project-tags">
+                    {project.tags.map((tag) => (
+                      <span key={tag} className="tag">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              </PixelCard>
             </motion.div>
           ))}
         </div>

@@ -1,9 +1,7 @@
 import { motion } from 'framer-motion'
-import ProfileCard from './ProfileCard'
+import PixelCard from './PixelCard'
 
 export default function Profile() {
-  const avatarUrl = 'https://github.com/xeoneid.png'
-
   return (
     <section id="profile" style={{ paddingTop: 80, paddingBottom: 80 }}>
       <div className="container">
@@ -40,14 +38,17 @@ export default function Profile() {
             viewport={{ once: true, margin: '-80px' }}
             style={{ display: 'flex', justifyContent: 'center' }}
           >
-            <ProfileCard
-              avatarUrl={avatarUrl}
-              name="Blas Ingiulla"
-              title="Game Engineer"
-              handle="xeoneid"
-              status="Open to work"
-              contactText="Contact"
-              onContactClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+            <PixelCard
+              colors="#6366f1,#818cf8,#a5b4fc"
+              gap={5}
+              speed={25}
+              style={{
+                width: '320px',
+                height: '460px',
+                backgroundImage: 'url(/yugioh-card.png)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
             />
           </motion.div>
         </div>
